@@ -18,6 +18,10 @@ The back end for an e-commerce site was developed by modifying existing code. It
 - dotenv
 - Insomnia
 
+# Screenshot
+
+(/Screenshot 2023-06-23 at 2.34.17 PM.png)
+
 # Usage
 
 File can used and shared for knowledge or expansion, as needed.
