@@ -24,9 +24,9 @@ File can used and shared for knowledge or expansion, as needed.
 
 # License
 
-(LICENSE)
+LICENSE.txt
 
-#Links
+# Links
 
 - GitHub Repository: https://github.com/cherah-petra/eCommerceChallenge13
 - Video Demo: https://drive.google.com/file/d/1VFN3NkekccoqESGW0C6-fSMA63zIEFSv/view
