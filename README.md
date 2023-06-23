@@ -1,7 +1,3 @@
-https://drive.google.com/file/d/1VFN3NkekccoqESGW0C6-fSMA63zIEFSv/view
-
-https://github.com/cherah-petra/eCommerceChallenge13
-
 ## eCommerce Challenge 13
 
 # Description
