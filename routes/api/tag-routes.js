@@ -1,12 +1,13 @@
 const router = require('express').Router();
 const { Tag, Product, ProductTag } = require('../../models');
+const { update } = require('../../models/Product');
 
 // The `/api/tags` endpoint
 
 router.get('/', async (req, res) => {
   try {
-    const tagData = await tag.findAll({
-      include: [{ model: tagName }],
+    const tagData = await Tag.findAll({
+      include: [{ model: Product }],
     });
     res.status(200).json(tagData);
   } catch (err) {
@@ -17,8 +18,8 @@ router.get('/', async (req, res) => {
 
 router.get("/:id", async (req, res) => {
   try {
-    const tagDataById = await tag.findByPk(req.params.id, {
-      include: [{ model: tagData }],
+    const tagDataById = await Tag.findByPk(req.params.id, {
+      include: [{ model: Product }],
     });
     if (!tagDataById) {
       res.status(404).json({ message: "No tag with this ID was found!" });
@@ -34,7 +35,7 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   // create a new category
   try {
-    const tagCreated = await tag.create(req.body);
+    const tagCreated = await Tag.create(req.body);
     res.status(200).json(tagCreated);
   } catch (err) {
     console.log(err);
@@ -45,9 +46,9 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
   // update a tag's name by its `id` value
   try {
-    const updateTag = await tag.update(
+    const updateTag = await Tag.update(
       {
-        tagName: req.body.tagName,
+        tag_name: req.body.tag_name,
       },
       {
         where: {
@@ -59,7 +60,7 @@ router.put("/:id", async (req, res) => {
       res.status(404).json({ message: "No category with this ID was found!" });
       return;
     }
-    res.status(200).json(updateCategory);
+    res.status(200).json(updateTag);
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -70,7 +71,7 @@ router.delete("/:id", async (req, res) => {
 
   // delete a tag by its `id` value
   try {
-    const deleteTag = await tag.destroy({
+    const deleteTag = await Tag.destroy({
       where: {
         id: req.params.id
       }
