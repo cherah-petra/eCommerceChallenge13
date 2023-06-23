@@ -20,7 +20,7 @@ The back end for an e-commerce site was developed by modifying existing code. It
 
 # Screenshot
 
-![Screenshot](/Screenshot%2023-06-23%at%2.34.17%PM.png)
+![Screenshot](./Screenshot%2023-06-23%at%2.34.17%PM.png)
 
 # Usage
 
